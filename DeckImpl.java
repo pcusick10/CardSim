@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class DeckImpl implements Deck {
     private ArrayList<Card> cards;
     private ArrayList<Boolean> isCardDealt;
-    private int numCards;
 
     public DeckImpl() {
         this.initializeCards();
@@ -11,7 +10,6 @@ public class DeckImpl implements Deck {
         for (int i = 0; i < isCardDealt.size(); i++) {
             isCardDealt.add(false);
         }
-        this.numCards = 52;
     }
 
     private void initializeCards() {
@@ -82,15 +80,10 @@ public class DeckImpl implements Deck {
         }
     }
 
-    public int getNumCards() {
-        return this.numCards;
-    }
-
     public void shuffle() {
         for (int i = 0; i < this.isCardDealt.size(); i++) {
             this.isCardDealt.set(i, false);
         }
-        this.numCards = 52;
     }
 
     public boolean canDealCard(int index) {
@@ -99,7 +92,6 @@ public class DeckImpl implements Deck {
 
     public Card dealCard(int index) {
         this.isCardDealt.set(index, true);
-        this.numCards--;
         return this.cards.get(index);
     }
 }

@@ -2,15 +2,14 @@ public interface BlackJack {
     
     public Person getDealer();
 
-    public void setDealer(Person dealer);
-
     public Player[] getPlayers();
 
-    public void setPlayers(Player[] players);
+    public Player getCurrentPlayer();
 
-    public Player currentPlayer();
+    public void setCurrentPlayer(Player player);
 
     public int getNumDecks();
 
-    public void setNumDecks();
+    public void shuffle();
+    
 }
