@@ -7,14 +7,14 @@ public class DeckImpl implements Deck {
     public DeckImpl() {
         this.initializeCards();
         this.isCardDealt = new ArrayList<>(52);
-        for (int i = 0; i < isCardDealt.size(); i++) {
+        for (int i = 0; i < 52; i++) {
             isCardDealt.add(false);
         }
     }
 
     private void initializeCards() {
         this.cards = new ArrayList<>(52);
-        for (int i = 0; i < cards.size(); i++) {
+        for (int i = 0; i < 52; i++) {
             Suit currentSuit = Suit.SPADES;
             Rank currentRank = Rank.ACE;
             for (int j = 0; j < 4; j++) {

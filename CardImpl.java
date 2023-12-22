@@ -17,6 +17,6 @@ public class CardImpl implements Card {
     }
 
     public void printCard() {
-        System.out.print("The " + this.rank + " of " + this.suit + ".");
+        System.out.print(this.rank + " of " + this.suit);
     }
 }

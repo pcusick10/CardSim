@@ -7,4 +7,10 @@ public interface Player extends Person {
     public int getCurrentBet();
 
     public void setCurrentBet(int currentBet);
+
+    public boolean isBusted();
+
+    public boolean getIsIn();
+
+    public boolean checkBlackjack();
 }
